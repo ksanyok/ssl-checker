@@ -1,0 +1,55 @@
+{
+  "name": "@promopilot/ssl-checker",
+  "version": "1.0.0",
+  "description": "Check SSL/TLS certificates from the command line: days until expiry, host name and wildcard match, missing intermediates, untrusted and self-signed certificates, key size, TLS version, cipher and ALPN. Bulk mode and expiry alerts for CI. Zero-dependency Node.js CLI, library and GitHub Action. Free online version by PromoPilot.",
+  "keywords": [
+    "ssl",
+    "tls",
+    "ssl-checker",
+    "ssl-certificate",
+    "certificate-expiry",
+    "https",
+    "x509",
+    "certificate-monitoring",
+    "devops",
+    "monitoring",
+    "cli",
+    "nodejs",
+    "github-action",
+    "promopilot"
+  ],
+  "homepage": "https://promopilot.link/en/tools/ssl-checker.php?utm_source=github&utm_medium=repo&utm_campaign=tools&utm_content=ssl-checker",
+  "bugs": {
+    "url": "https://github.com/ksanyok/ssl-checker/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksanyok/ssl-checker.git"
+  },
+  "license": "MIT",
+  "author": "Alexandr Krikun (https://github.com/ksanyok)",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "bin": {
+    "ssl-checker": "bin/cli.js"
+  },
+  "files": [
+    "src",
+    "bin",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

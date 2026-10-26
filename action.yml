@@ -1,0 +1,16 @@
+name: "SSL Checker by PromoPilot"
+description: "Check TLS certificates and fail when one expires soon, mismatches the host or has a broken chain."
+author: "Alexandr Krikun"
+branding:
+  icon: "lock"
+  color: "purple"
+inputs:
+  args:
+    description: "Arguments passed to the ssl-checker CLI, e.g. \"example.com\""
+    required: true
+runs:
+  using: composite
+  steps:
+    - name: Run ssl-checker
+      shell: bash
+      run: node "$GITHUB_ACTION_PATH/bin/cli.js" ${{ inputs.args }}
